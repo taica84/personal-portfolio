@@ -63,8 +63,49 @@ linkWork.forEach(link => link.addEventListener('click' , activeWork))
 /*=============== SWIPER TESTIMONIAL ===============*/
 
 
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
+// let swiperTestimonial = new Swiper(".testimonial__container", {
+//     spaceBetween: 24,
+//     loop:true,
+//     grabCursor:true,
+
+//     pagination: {
+//       el: ".testimonial__card",
+//       clickable: true,
+//     },
+//     breakpoints: {
+//         576: {
+//           slidesPerView: 2,
+        
+//         },
+//         768: {
+//           slidesPerView: 2,
+//           spaceBetween: 48,
+//         },
+//       },
+//   });
+
+
+
+/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+const sections = document.querySelectorAll('section[id]')
+
+function scrollActive(){
+    const scrollY = window.pageYOffset
+
+    sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight,
+              sectionTop = current.offsetTop - 58,
+              sectionId = current.getAttribute('id')
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+        }else{
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+        }
+    })
+}
+window.addEventListener('scroll', scrollActive)
 
 /*=============== LIGHT DARK THEME ===============*/ 
 
