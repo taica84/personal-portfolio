@@ -937,9 +937,273 @@ transform: translateX(.25rem);
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+  @media screen and (max-width : 320px) {
+    .nav__menu {
+      padding: 1rem 1.5rem;
+    }
 
+    .home__buttons {
+      flex-direction: column;
+    }
+
+    .home__handle {
+      width: 150px;
+      height: 253px;
+    }
+
+    .home__img {
+     width:  130px;
+    }
+
+    .about__info {
+      grid-template-columns: repeat(2,1fr);
+    }
+
+    .skills__box {
+      column-gap: 1rem;
+    }
+    
+    .skills__name {
+      font-size: var(--small-font-size);
+    }
+
+    .services__container {
+      grid-template-columns: 145px;
+      justify-content: center;
+    }
+
+    .work__item {
+      font-size: var(--small-font-size);
+    }
+
+    .work__filters {
+      column-gap: .25rem;
+    }
+
+
+
+  }
 
 /* For medium devices */
+  @media screen and (max-width : 576px) {
+    .nav__menu {
+      width: 328px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
 
 
-/* For large devices */
+    .about__info {
+      grid-template-columns: repeat(3,140px);
+      justify-content: center;
+    }
+
+    .about__description {
+      padding: 0 5rem;
+    }
+
+    .skills__container {
+     
+      justify-content: center;
+    }
+
+    .skills__content {
+      padding: 2rem 4rem;
+    }
+
+    .services__container {
+      grid-template-columns: repeat(2,160px);
+      justify-content: center;
+    }
+
+    .services__modal-content {
+      width: 500px;
+      padding: 4.5rem 2.5rem 2.5rem;
+    }
+
+    .services__modal-description {
+      padding: 0 3.5rem;
+    }
+
+    .work__container {
+      justify-content: center;
+    }
+
+    .work__img {
+      width: 295px;
+    }
+
+    .contact__info {
+      grid-template-columns: 300px;
+      justify-content: center;
+    }
+
+    .contact__form {
+      width: 360px;
+      margin: 0 auto;
+    }
+
+  }
+
+
+
+@media screen and (min-width: 767px) {
+
+  .nav__menu{
+    width: 400px;
+  }
+
+ 
+   .contact__container {
+    grid-template-columns: repeat(2,max-content);
+    justify-content: center;
+    column-gap: 3rem;   
+   }
+
+   .contact__form {
+    width: 560px;
+  }
+
+ 
+
+  .home__container ,
+  .nav__menu,
+  .about__container,
+  .skills__container,
+  .work__card,
+  .work__container,
+  .footer__container{
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .services__card {
+    grid-template-columns: repeat(3,1fr);
+   justify-content: center;
+  }
+
+  .skills__container {
+    width: 40rem;
+    
+  }
+
+  .skills__box {
+    column-gap: 10rem;
+  }
+
+
+
+}
+
+
+   /* For large devices */
+
+  @media screen and (min-width:992px) {
+     .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+   .section {
+     padding: 6.5rem 0 1rem;
+   }
+
+   .section__title {
+     margin-bottom: 3.5rem ;
+   }
+
+   .nav {
+     height: calc(var(--header-height) + 1rem);
+   }
+
+   .nav__menu{
+     width: 500px;
+   }
+
+   .home__handle {
+     width: 290px;
+     height: 400px;
+   }
+
+   .home__img {
+     width: 220px;
+   }
+
+   .home__social-link {
+     padding: .4rem;
+     font-size: 1.25rem;
+   }
+
+   .home__social::after {
+     transform: rotate(90deg) translate(16px,0);
+   }
+
+   .home__scroll-icon {
+     font-size: 2rem;
+   }
+
+   .about__container {
+     grid-template-columns: repeat(2,1fr);
+
+   }
+
+  .about__img {
+    width: 350px;
+  }
+
+  .about__data {
+    text-align: initial;
+  }
+
+  .about__box {
+    text-align: center;
+    padding: 1rem 1.25rem;
+  }
+
+  .about__description {
+    padding: 0 4rem 0 0;
+    margin-bottom: 2.5rem;
+  }
+
+  .services__container {
+    grid-template-columns: repeat(3,192px);
+    column-gap: 3rem;
+    justify-content: center;
+  }
+
+ .work__container {
+   gap: 3rem;
+   grid-template-columns: repeat(2,1fr);
+  }
+
+  .work__card {
+    padding: 1.25rem;
+    
+  }
+
+  .work__title {
+    margin-bottom: 5rem;
+  }
+
+  .testimonial__container {
+    width: 750px;
+  }
+
+  .testimonial__card {
+    padding: 1.5rem 2rem;
+  }
+
+  .contact__container {
+    column-gap: 6rem;
+  }
+
+  .footer__social-link {
+    font-size: 1.25rem;
+    padding: .4rem;
+    border-radius: .5rem;
+  }
+
+
+  }
